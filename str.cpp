@@ -1,3 +1,11 @@
+/*
+File: str.cpp
+Description:
+Course: 150018 C++ Workshop, Exercise 4, Question 3
+Author: Dan Zilberstein
+Students: eli iluz 311201354
+		& avishay farkash 205918790
+*/
 #include <iostream>
 #include <string>
 
@@ -6,20 +14,28 @@ using namespace std;
 
 int main() {
 
-string str;
-getline(cin, str);
-str.replace(str.find(" "),1,"*");
-str.replace(str.find(" "),1,"*");
-str.replace(str.find(" "),1,"*");
-cout << str << endl;
-str.replace(str.find_last_of("*")+1,str.size()- str.find_last_of("*") + 1,"#!!@1234");
-cout << str << endl;
-str = str.substr(str.find("*")+1, str.size() - str.find("*"));
-cout << str << endl;
-str = str.substr(str.find("*") + 1, str.size() - str.find("*"));
-cout << str << endl;
-str = str.substr(str.find("*") + 1, str.size() - str.find("*"));
-cout << str << endl;
+	string str;
 
-return 0;
+	cout << "Enter 4 strings with space between them:" << endl;
+
+	getline(cin, str);
+
+	for (int i = 0; i < 3; ++i)
+		str.replace(str.find(" "), 1, "*");
+	cout << str << endl;
+
+	str.replace(str.find_last_of("*") + 1, str.size() - 1 - str.find_last_of("*"), "#!!@1234");
+	cout << str << endl;
+
+	for (int i = 0; i < 3; ++i)
+	{
+
+		str = str.substr(str.find("*") + 1, str.size() - str.find("*") - 1);
+		cout << str << endl;
+	}
+
+	str.clear();
+	cout << str << endl;
+
+	return 0;
 }

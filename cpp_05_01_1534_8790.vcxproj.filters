@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\OneDrive - g.jct.ac.il\מסמכים\GitHub\cpp_05_01_1534_8790\str.cpp">
+    <ClCompile Include="str.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
