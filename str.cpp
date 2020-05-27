@@ -20,16 +20,16 @@ int main() {
 
 	getline(cin, str);
 
-	for (int i = 0; i < 3; ++i)
+	while(str.find(" ") != -1)
 		str.replace(str.find(" "), 1, "*");
+
 	cout << str << endl;
 
 	str.replace(str.find_last_of("*") + 1, str.size() - 1 - str.find_last_of("*"), "#!!@1234");
 	cout << str << endl;
 
-	for (int i = 0; i < 3; ++i)
+	while (str.find("*") != -1)
 	{
-
 		str = str.substr(str.find("*") + 1, str.size() - str.find("*") - 1);
 		cout << str << endl;
 	}
